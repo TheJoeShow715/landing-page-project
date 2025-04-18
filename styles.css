@@ -1,7 +1,10 @@
 .one {
     font-size: larger;
-    font-weight: bolder
+    font-weight: bolder;
+    display: flex;
+    
 }
+
 
 .two {
     font-family: 'Courier New', Courier, monospace;
@@ -9,4 +12,9 @@
 
 .three {
     font-size: large;
+}
+
+.quarter-one {
+    display: flex;
+    justify-content: center;
 }
