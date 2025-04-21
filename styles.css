@@ -2,6 +2,7 @@
     font-size: larger;
     font-weight: bolder;
     display: flex;
+    flex-direction: column;
     
 }
 
@@ -17,4 +18,11 @@
 .quarter-one {
     display: flex;
     justify-content: center;
+}
+
+.one-text {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border: 8px;
 }
