@@ -39,3 +39,8 @@
     align-items: center;
     min-height: 100vh;
 }
+
+.boxes {
+    display: flex;
+    justify-content: center;
+}
