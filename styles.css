@@ -21,7 +21,7 @@
 
 .quarter-one {
     display: flex;
-    max-width: 960px;
+    width: 100%;
     padding: 20px;
 }
 
@@ -43,6 +43,13 @@
 .boxes {
     display: flex;
     justify-content: center;
+    gap: 20px;
+}
+
+.two {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .three {
@@ -53,7 +60,38 @@
 }
 
 .quarter-three {
-    display: flexbox;
+    display: flex;
     justify-content: center;
     margin: 50px;
+    padding: 100px;
+    border: 2px;
 }
+
+.quarter-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box1, .box2, .box3, .box4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    flex-direction: column;
+}
+
+.blue-square {
+    background-color: blue;
+    color: white;
+    padding: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerq4 {
+    display: flex;
+    flex-direction: column;
+    }
