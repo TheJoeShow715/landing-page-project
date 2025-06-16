@@ -1,106 +1,212 @@
-.one {
-    font-size: larger;
-    font-weight: bolder;
+/* General Body and HTML Element Styling */
+body {
+    font-family: Arial, sans-serif; /* Recommended: Add a default font for the whole page */
+    margin: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+
+    /* Flexbox for main layout to distribute quarters equally vertically */
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    flex-direction: column; /* Stack children (quarters) vertically */
+    min-height: 100vh;      /* Make the body take up at least the full viewport height */
 }
 
-.one img {
-    flex-shrink: 0;
+img {
+    max-width: 100%; /* Ensure images are responsive and don't overflow */
+    height: auto;    /* Maintain aspect ratio */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Quarter Sections - Main Layout Distribution */
+.quarter-one,
+.quarter-two,
+.quarter-three,
+.quarter-four {
+    flex-grow: 1; /* Makes each quarter take up equal available height */
+    /* Add default padding/backgrounds here or keep them specific as you have */
+    padding: 50px 20px; /* Consistent base padding */
+    display: flex; /* Many quarters will use flex internally */
+    flex-direction: column; /* Default for quarter content unless specified */
+    align-items: center; /* Center content horizontally by default */
+    justify-content: center; /* Center content vertically by default */
+    text-align: center; /* General text alignment */
+}
+
+/* Specific Quarter Styles */
+.quarter-one {
+    background-color: #f8f9fa;
+    flex-direction: row; /* For side-by-side text and image */
+    justify-content: space-around;
+    align-items: center;
 }
 
 .one-text {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    flex-shrink: 0;
+    /* Removed flex-shrink: 0; to allow it to shrink if needed */
+    max-width: 500px; /* Limit text block width for readability */
+    text-align: left; /* Align text to the left within its block */
+    font-size: 1.2em; /* Relative font size */
+    font-weight: bolder; /* As requested, but consider applying to specific headings */
 }
 
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.one-text > div { /* For the sub-text inside one-text */
+    font-size: 0.9em; /* Slightly smaller than main text */
+    color: #666;
+    margin-top: 10px; /* Space from main heading */
+}
+
+.quarter-one img { /* Targeting the image within quarter-one */
+    width: 300px; /* Set specific width */
+    height: 200px; /* Set specific height */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 8px; /* Slightly rounded corners */
+    /* Removed flex-shrink: 0; to allow it to shrink if needed */
+}
+
+.quarter-two {
+    background-color: #e9ecef;
+}
+
+.quarter-two .two { /* Targeting the header text within quarter-two */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em; /* Larger for a heading */
+    color: #333;
+    margin-bottom: 40px;
+    width: auto; /* Let content dictate width, or set max-width */
 }
 
 .boxes {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line on smaller screens */
     gap: 20px;
+    max-width: 1000px; /* Limit the width of the box container */
+    margin-top: 20px; /* Space from the .two heading */
 }
-
-.two {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.three {
-    background-color: lightgray;
-    color: #1f2937;
-    font-style: italic;
-    font-size: 36px;
-}
-
-.quarter-one {
-    display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #f8f9fa;
-  padding: 50px 20px;
-}
-
-.quarter-two {
-    text-align: center;
-  padding: 50px 20px;
-  background-color: #e9ecef;
-}
-
-.quarter-three {
-    background-color: #6c757d;
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-  font-size: 1.5em;
-  font-style: italic;
-}
-
-.quarter-four {
-    padding: 50px 20px 0;
-    background-color: #f8f9fa;
-    text-align: center;
-  }
 
 .box1, .box2, .box3, .box4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 200px;
     flex-direction: column;
+    max-width: 200px; /* Keep consistent max width */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-basis: 220px; /* Suggest a preferred size for flex items */
+    text-align: center; /* Center subtext below image */
 }
 
-.blue-square {
-    background-color: blue;
+.boxes img {
+    width: 200px; /* Specific width as per HTML */
+    height: 100px; /* Specific height as per HTML */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space between image and subtext */
+}
+
+
+.quarter-three {
+    background-color: #6c757d;
     color: white;
-    padding: 100px; 
+    font-style: italic;
+    font-size: 1.8em; /* Adjusted for better readability as a quote */
+    padding: 80px 20px; /* Ample padding for a quote section */
+}
+
+.quarter-three .three { /* Targeting the specific div holding the quote */
+    max-width: 800px; /* Limit width for readability of long text */
+    margin: 0 auto; /* Center the text block */
+    line-height: 1.6; /* Improve readability of long text */
+}
+
+/* If you add a span for the author credit in HTML: */
+/*
+.quarter-three .three .author-credit {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-style: normal;
+    color: #dee2e6;
+}
+*/
+
+.quarter-four {
+    background-color: #f8f9fa;
+    padding: 50px 20px; /* Consistent padding */
+}
+
+/* This targets the div with class "body" *inside* quarter-four */
+.quarter-four .body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    width: 100%; /* Take full width of its parent */
 }
 
 .containerq4 {
     display: flex;
-    flex-direction: column;
-    }
+    flex-direction: column; /* Stacks content inside the container */
+    align-items: center; /* Centers items horizontally within container */
+    width: 100%; /* Take full width of its parent */
+}
 
-.quarter-one,
-.quarter-two,
-.quarter-three,
-.quarter-four {
-    flex-grow: 1;
+.blue-square {
+    background-color: #007bff; /* Changed to a common blue */
+    color: white;
+    padding: 40px; /* Adjusted padding to be less extreme, but still prominent */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px; /* Space between text and button */
+    max-width: 700px; /* Limit width for better appearance */
+    width: 90%; /* Responsive width */
+    text-align: center; /* Ensure text is centered within the square */
+}
+
+.blue-square strong {
+    font-size: 2em; /* Larger font for the main call to action */
+    margin-bottom: 10px; /* Space below "It's Time!" */
+}
+
+.blue-square button {
+    background-color: white; /* White button in a blue box */
+    color: #007bff;
+    border: 2px solid white;
+}
+
+.blue-square button:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    width: 100%; /* Ensure footer takes full width */
+    margin-top: 50px; /* Space above the footer from the blue square */
 }
