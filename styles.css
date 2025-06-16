@@ -10,15 +10,6 @@
     flex-shrink: 0;
 }
 
-
-.two {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.three {
-    font-size: large;
-}
-
 .one-text {
     display: flex;
     flex-direction: column;
@@ -26,7 +17,7 @@
     flex-shrink: 0;
 }
 
-.body {
+body {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -45,6 +36,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .three {
@@ -94,7 +86,7 @@
 .blue-square {
     background-color: blue;
     color: white;
-    padding: 200px; 
+    padding: 100px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,5 +103,4 @@
 .quarter-three,
 .quarter-four {
     flex-grow: 1;
-    
 }
