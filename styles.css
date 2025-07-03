@@ -64,6 +64,8 @@ button:hover {
     text-align: left; /* Align text to the left within its block */
     font-size: 1.75em; /* Relative font size */
     font-weight: bolder; /* As requested, but consider applying to specific headings */
+    color: #f8f9fa;
+    background-color: #1f2937;
 }
 
 .one-text > div { /* For the sub-text inside one-text */
