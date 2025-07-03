@@ -47,7 +47,9 @@ button:hover {
 
 /* Specific Quarter Styles */
 .quarter-one {
-    background-color: #f8f9fa;
+    background-color: #1f2937;
+    color: #0056b3;
+    font-size: 48px;
     flex-direction: row; /* For side-by-side text and image */
     justify-content: space-around;
     align-items: center;
